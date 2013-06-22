@@ -1,0 +1,217 @@
+@import 'compass';
+@import 'sass-bootstrap/lib/mixins';
+@import 'sass-bootstrap/lib/reset';
+
+/*------------------------------------*\
+    $Variables
+\*------------------------------------*/
+$sansFontFamily: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$headingFontFamily : 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$baseFontSize: 14px;
+$baseFontFamily: $sansFontFamily;
+
+
+$pink: #FF25D1;
+$pinkMuted: #CA79CC;
+$pinkLight: #FEE3FF;
+$pinkDark: #4F284C;
+$greyDark: #7f727f;
+
+$white: #eee;
+$black: #333;
+
+$textColor: $pinkDark;
+$linkHover: $pink;
+
+$default-transition-duration: 250ms;
+
+
+/*------------------------------------*\
+    $Mixins
+\*------------------------------------*/
+
+
+@mixin rem ($property, $value) {
+  #{$property}: $value * $baseFontSize;
+  #{$property}: #{$value}rem;
+}
+
+/*------------------------------------*\
+    $Main
+\*------------------------------------*/
+
+* { @include box-sizing(border-box); }
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  @include text-shadow(1px 1px 0 rgba(#fff, .9));
+  background-color: #FDFCFF;
+  border-top: 5px solid $pink;
+  color: $textColor;
+  font-family: $sansFontFamily;
+  font-size: $baseFontSize;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+// Hero Unit
+.hero-unit {
+  margin-top: 2rem;
+  @media (min-height: 620px) and (min-width: 620px) {
+    top: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -300px;
+  }
+  img { @include rem(margin-bottom, 1); }
+}
+
+
+h1,
+h2 {
+  font-family: $headingFontFamily;
+  @include rem(font-size, 1);
+  font-weight: 700;
+  color: $pinkDark;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+}
+
+h1 {
+  width: 100%;
+  @include rem(font-size, 1.5);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-circle,
+.img-circle > img {
+  border-radius: 500px;
+  border: 10px solid #fff;
+  @include box-shadow(1px 1px 20px rgba($black, .13));
+}
+
+
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  li {
+    display: inline-block;
+    margin: 0 $baseFontSize / 2;
+    margin: 0 .25rem;
+    &:first-child { margin-left: 0; }
+    &:last-child  { margin-right: 0; }
+  }
+  a {
+    @include border-radius(50%);
+    @include rem(font-size, 2);
+    @include rem(height, 3);
+    @include rem(line-height, 3);
+    @include rem(width, 3);
+    @include single-transition();
+    color: $textColor;
+    display: inline-block;
+    padding: 0;
+    &:hover {
+      color: $linkHover;
+    }
+
+  }
+
+}
+
+p {
+  padding: $baseFontSize * .5 $baseFontSize * 1.5;
+  padding: .5rem 1.5rem;
+  max-width: $baseFontSize * 40;
+  max-width: 40rem;
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    $Icon Font
+\*------------------------------------*/
+
+$fontAwesomePath:   "fonts/" !default;
+$borderColor:       #eee;
+$iconMuted:         #eee;
+@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src:url('fonts/FontAwesome.eot');
+  src:url('fonts/FontAwesome.eot?#iefix') format('embedded-opentype'),
+    url('fonts/FontAwesome.woff') format('woff'),
+    url('fonts/FontAwesome.ttf') format('truetype'),
+    url('fonts/FontAwesome.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+/* makes sure icons active on rollover in links */
+a {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    display: inline-block;
+  }
+}
+
+// Icon Borders
+
+.icon-border {
+  border: solid 1px $borderColor;
+  padding: .2em .25em .15em;
+  @include border-radius(3px);
+}
+
+.icon-linkedin-sign:before        { content: "\f08c"; }
+.icon-linkedin:before             { content: "\f0e1"; }
+.icon-twitter-sign:before         { content: "\f081"; }
+.icon-twitter:before              { content: "\f099"; }
+.icon-facebook-sign:before        { content: "\f082"; }
+.icon-facebook:before             { content: "\f09a"; }
+.icon-pinterest:before            { content: "\f0d2"; }
+
