@@ -1,0 +1,154 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$blackDark:             #000000 !default;
+$black:                 #191919 !default;
+$grayDarker:            #404040 !default;
+$grayDark:              #404040 !default;
+$gray:                  #7F7F7F !default;
+$grayLight:             #BFBFBF !default;
+$grayLighter:           #E6E6E6 !default;
+$white:                 #FFFFFF !default;
+
+
+// Reds
+// -------------------------
+$redDark:               #AD1212 !default;
+$red:                   #DB1513 !default;
+$redLight:              #E4504E !default;
+$redLighter:            #ED8A89 !default;
+$redLightest:           #F6C4C4 !default;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb !default;
+$blueDark:              #0064cd !default;
+$green:                 #46a546 !default;
+$yellow:                #ffc40d !default;
+$orange:                #f89406 !default;
+$pink:                  #c3325f !default;
+$purple:                #7a43b6 !default;
+
+
+// Themes
+// -------------------------
+
+$bodyBackground:        $white !default;
+$textColor:             $black !default;
+
+// Header & Navbar
+$headerBackground:      $grayLighter !default;
+$headerColor:           $black !default;
+$navBackground:         $grayLighter + 10 !default;
+$navHighlight:          $grayLight !default;
+$navTextColor:          $black !default;
+$brandBackground:       $white !default;
+$logo:                  $black !default;
+
+// Highlighted/Selected Text
+$selectionBackground:   $black !default;
+$selectionColor:        $white !default;
+
+
+
+
+// Transitions
+// -------------------------
+$default-transition-duration:  250ms;
+
+// Links
+// -------------------------
+$linkColor:             $red !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
+
+// Responsive Breakpoints
+// -------------------------
+$bp-1: 600px;
+$bp-2: 1000px;
+
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$baseFontSize:          14px !default;
+$baseFontFamily:        $sansFontFamily !default;
+$sqliFontFamily:        "SQLI", $sansFontFamily !default;
+$baseLineHeight:        1.75rem !default;
+$altFontFamily:         "SQLI", $serifFontFamily !default;
+
+$headingsFontFamily:    "SQLI Black", $sansFontFamily !default; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    bold !default;    // instead of browser default, bold
+$headingsColor:         inherit !default; // empty to use BS default, $textColor
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+$fontSizeLarge:         $baseFontSize * 1.25 !default; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85 !default; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75 !default; // ~11px
+
+$paddingLarge:          11px 19px !default; // 44px
+$paddingSmall:          2px 10px !default;  // 26px
+$paddingMini:           0px 6px !default;   // 22px
+
+$baseBorderRadius:      4px !default;
+$borderRadiusLarge:     6px !default;
+$borderRadiusSmall:     3px !default;
+
+
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000 !default;
+$zindexPopover:           1010 !default;
+$zindexTooltip:           1030 !default;
+$zindexFixedNavbar:       1030 !default;
+$zindexBrand:             1033 !default;
+$zindexBtnNavbar:         1036 !default;
+$zindexModalBackdrop:     1040 !default;
+$zindexModal:             1050 !default;
+
+
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight !default;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $grayLighter !default;
+
+
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px !default;
+
+
+// Wells
+// -------------------------
+$wellBackground:                  #f5f5f5 !default;
+

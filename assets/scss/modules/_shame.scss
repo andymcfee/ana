@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    $Navigation
+\*------------------------------------*/
+
+.nav {
+  @include clearfix;
+  width: 100%;
+  li {
+    width: 25%;
+    float: left;
+    height: 100px;
+    background: $blue;
+    display: block;
+  }
+}
